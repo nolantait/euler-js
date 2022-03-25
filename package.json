@@ -1,0 +1,20 @@
+{
+  "name": "euler-js",
+  "version": "1.0.0",
+  "description": "Euler problems with TDD",
+  "main": "index.js",
+  "author": "Nolan Tait",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "prettier": "^2.6.1"
+  },
+  "dependencies": {
+    "node": "^17.7.1"
+  },
+  "scripts": {
+    "test": "yarn node --experimental-vm-modules $(yarn bin jest)"
+  }
+}
