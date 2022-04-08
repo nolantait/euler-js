@@ -1,4 +1,4 @@
-import { hello } from "../";
+import { hello, isPrime, generatePrimes } from "../";
 
 // This is a test which runs when we run "yarn test" from the command line
 // We start by calling the function test() which takes two arguments, the first
@@ -14,3 +14,21 @@ test("Returns 1+1", () => {
   // Then we call toBe(2) which checks that the answer from expect is 2
   expect(hello()).toBe(2);
 });
+
+test("#isPrime", () => {
+  expect(isPrime(1)).toBe(false)
+  expect(isPrime(2)).toBe(true)
+  expect(isPrime(3)).toBe(true)
+  expect(isPrime(4)).toBe(false)
+  expect(isPrime(5)).toBe(true)
+})
+
+// Generates prime numbers up to a limit n
+test("#generatePrimes", () => {
+  expect(generatePrimes(6)).toBe([2, 3, 5, 7, 11, 13])
+})
+
+// Returns the nth prime number
+test("nthPrime", () => {
+  expect(nthPrime(6)).toBe(13)
+})
